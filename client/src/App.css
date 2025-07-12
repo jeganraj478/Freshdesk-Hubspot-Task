@@ -1,0 +1,22 @@
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 8px;
+  color: white;
+  margin-left: 6px;
+}
+
+/* Priority Colors */
+.badge-low { background-color: #6c757d; }      /* Gray */
+.badge-medium { background-color: #17a2b8; }   /* Teal */
+.badge-high { background-color: #ffc107; }     /* Yellow */
+.badge-urgent { background-color: #dc3545; }   /* Red */
+
+/* Status Colors */
+.badge-open { background-color: #007bff; }     /* Blue */
+.badge-pending { background-color: #fd7e14; }  /* Orange */
+.badge-resolved { background-color: #28a745; } /* Green */
+.badge-closed { background-color: #343a40; }   /* Dark Gray */
+.badge-waiting { background-color: #6f42c1; }  /* Purple */

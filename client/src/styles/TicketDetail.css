@@ -1,0 +1,25 @@
+.ticket-detail-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0.5rem 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.ticket-detail-container h2 {
+  margin-bottom: 1rem;
+}
+
+.conversation-list {
+  list-style: none;
+  padding: 0;
+}
+
+.conversation-item {
+  background: #f8f8f8;
+  border-left: 4px solid #007bff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
