@@ -1,0 +1,88 @@
+.webhook-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.webhook-heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #333;
+  border-bottom: 2px solid #f2f2f2;
+  padding-bottom: 0.5rem;
+}
+
+.webhook-empty {
+  text-align: center;
+  color: #777;
+  font-size: 1.1rem;
+}
+
+.webhook-log-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.webhook-log-item {
+  border: 1px solid #eee;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background: #fafafa;
+  transition: all 0.2s ease-in-out;
+}
+
+.webhook-log-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.log-type {
+  font-weight: 600;
+  color: #007bff;
+}
+
+.log-time {
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.log-payload {
+  background-color: #1e1e1e;
+  color: #dcdcdc;
+  padding: 0.75rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+/* 🔁 Pulse Spinner */
+.webhook-loader {
+  padding: 2rem;
+}
+
+.pulse-line {
+  height: 20px;
+  margin-bottom: 10px;
+  background: linear-gradient(-90deg, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%);
+  background-size: 400% 400%;
+  animation: pulse 1.2s ease-in-out infinite;
+  border-radius: 6px;
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
