@@ -77,6 +77,10 @@ const LoginSignup = ({ type = 'login' }) => {
           </p>
         )}
       </div>
+      <div className='auth-message'>
+        Note: The server may take a few seconds to respond if it's been inactive, 
+        due to free hosting limitations.
+      </div>
     </div>
   );
 };

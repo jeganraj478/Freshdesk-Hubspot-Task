@@ -14,8 +14,13 @@
   transition: color 0.2s ease-in-out;
 }
 
+.navbar-title{
+  color: #0e0000;
+  font-weight: 800;
+}
+
 .navbar a:hover {
-  color: #d9edf7;
+  color: #7dcff8;
 }
 
 .logout-btn {

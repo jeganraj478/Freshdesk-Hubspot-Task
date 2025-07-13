@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Axios from '../utils/axiosConfig';
+import PulseLoader from '../components/PulseLoader';
 import '../styles/WebhookLogs.css';
 
 const WebhookLogs = () => {
@@ -7,7 +8,7 @@ const WebhookLogs = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    Axios.get('/webhook/logs')
+    Axios.get('api/webhook/logs')
       .then((res) => setLogs(res.data))
       .catch((err) => console.error('Failed to fetch logs:', err))
       .finally(() => setLoading(false));
@@ -18,11 +19,7 @@ const WebhookLogs = () => {
       <h2 className="webhook-heading">📜 Freshdesk Webhook Logs</h2>
 
       {loading ? (
-        <div className="webhook-loader">
-          <div className="pulse-line" />
-          <div className="pulse-line" />
-          <div className="pulse-line" />
-        </div>
+        <PulseLoader/>
       ) : logs.length === 0 ? (
         <p className="webhook-empty">No logs found.</p>
       ) : (

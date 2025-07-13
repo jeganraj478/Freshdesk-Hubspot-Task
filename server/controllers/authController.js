@@ -14,9 +14,8 @@ const signup = async (req, res) => {
 
     const hashedPassword = await bcrypt.hash(password, 10);
     const user = await User.create({ email, password: hashedPassword });
-    const isApiKeyPresent=user?.freshdeskDomain && user?.freshdeskKey && user?.hubspotKey 
     const token = generateToken(user._id);
-    res.status(201).json({ token,isApiKeyPresent });
+    res.status(201).json({ token });
   } catch (err) {
     res.status(500).json({ message: 'Signup failed', error: err.message });
   }
@@ -32,7 +31,9 @@ const login = async (req, res) => {
     if (!match) return res.status(400).json({ message: 'Invalid credentials' });
 
     const token = generateToken(user._id);
-    res.json({ token });
+    const isApiKeyPresent=user?.freshdeskDomain && user?.freshdeskKey && user?.hubspotKey 
+
+    res.json({ token,isApiKeyPresent });
   } catch (err) {
     res.status(500).json({ message: 'Login failed', error: err.message });
   }
