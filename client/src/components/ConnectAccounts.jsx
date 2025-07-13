@@ -15,7 +15,7 @@ const ConnectAccounts = () => {
     setLoading(true);
 
     try {
-      const res = await Axios.post('/auth/save-keys', {
+      const res = await Axios.post('api/auth/save-keys', {
         freshdeskKey,
         freshdeskDomain,
         hubspotKey,
