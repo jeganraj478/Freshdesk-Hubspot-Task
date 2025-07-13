@@ -39,7 +39,7 @@ const ConnectAccounts = () => {
       <h2>🔑 Connect Freshdesk & HubSpot</h2>
       <form className="auth-form" onSubmit={handleConnect}>
         <input
-          type="text"
+          type="password"
           placeholder="Freshdesk API Key"
           value={freshdeskKey}
           onChange={(e) => setFreshdeskKey(e.target.value)}
@@ -53,7 +53,7 @@ const ConnectAccounts = () => {
           required
         />
         <input
-          type="text"
+          type="password"
           placeholder="HubSpot Private App Token"
           value={hubspotKey}
           onChange={(e) => setHubspotKey(e.target.value)}
